@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Students Details
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    <table>
+        <tr>
+            <td><label for="Name">Name</label></td>
+            <td><input type="text" name="Name"></td>
+        </tr>
+        <tr>
+            <td><label for="Age">Age</label></td>
+            <td><input type="number" name="Age"></td>
+        </tr>
+        <tr>
+            <td><label for="Roll_NO">RollNo</label></td>
+            <td><input type="text" name="Roll_NO"></td>
+        </tr>
+        <tr>
+            <td><label for="Tamil">Tamil</label></td>
+            <td><input type="text" name="Tamil"></td>
+        </tr>
+        <tr>
+            <td><label for="English">English</label></td>
+            <td><input type="text" name="English"></td>
+        </tr>
+        <tr>
+            <td><label for="Maths">Maths</label></td>
+            <td><input type="text" name="Maths"></td>
+        </tr>
+        <tr>
+            <td><label for="Science">Science</label></td>
+            <td><input type="text" name="Science"></td>
+        </tr>
+        <tr>
+            <td><label for="Social">Social</label></td>
+            <td><input type="text" name="Social"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td></td>
+            <!-- <td><a href="{{url_for('home')}}"><input type="submit" value="Back"></a></td> -->
+        </tr>
+    </table>
+</form>
+{% endblock %}

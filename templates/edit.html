@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Students Details
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    <table>
+        <tr>
+            <td><label for="Name">Name</label></td>
+            <td><input type="text" name="Name" value={{form_edit.Name}}></td>
+        </tr>
+        <tr>
+            <td><label for="Age">Age</label></td>
+            <td><input type="number" name="Age" value={{form_edit.Age}}></td>
+        </tr>
+        <tr>
+            <td><label for="Roll_NO">RollNo</label></td>
+            <td><input type="text" name="Roll_NO" value={{form_edit.Roll_NO}}></td>
+        </tr>
+        <tr>
+            <td><label for="Tamil">Tamil</label></td>
+            <td><input type="text" name="Tamil" value={{form_edit.Marks[0]}}></td>
+        </tr>
+        <tr>
+            <td><label for="English">English</label></td>
+            <td><input type="text" name="English" value={{form_edit.Marks[1]}}></td>
+        </tr>
+        <tr>
+            <td><label for="Maths">Maths</label></td>
+            <td><input type="text" name="Maths" value={{form_edit.Marks[2]}}></td>
+        </tr>
+        <tr>
+            <td><label for="Science">Science</label></td>
+            <td><input type="text" name="Science" value={{form_edit.Marks[3]}}></td>
+        </tr>
+        <tr>
+            <td><label for="Social">Social</label></td>
+            <td><input type="text" name="Social"  value={{form_edit.Marks[4]}}></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

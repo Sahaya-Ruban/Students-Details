@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}
+User Page
+{% endblock %}
+{% block content %}
+<style>
+    .user{
+        background-color: rgb(104, 243, 243);
+        height: 30rem;
+    }
+    
+    table,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: lightblue;
+        text-align: center;
+        width: 20rem;
+        height: 20rem;
+        margin-left: 25rem;
+    }
+    h3{
+        text-align: center;
+        color:darkslategray;
+        font-style: italic;
+    }
+    p{
+        background-color: red;
+        color: white;
+        height: 2rem;
+        text-align: center;
+    }
+    .login button{
+        background-color: yellow;
+        
+    }
+    .login button:hover{
+        background-color: white;
+        color: red;
+    }
+</style>
+<div class="user">
+    <form action="" method="post">
+        <h3>Login</h3>
+        <table>
+            <tr>
+                <td><p>Please log in to access this page</p></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter User Name" name="name"></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="Password" placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check">Remember me</td>
+            </tr>
+            <tr>
+                <td class="login"><button type="submit">Login</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

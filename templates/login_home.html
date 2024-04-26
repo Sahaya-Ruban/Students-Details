@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+
+{% if login %}
+    You are logged in as <strong>{{ session['username'] }}</strong> <br />
+    <a href={{ url_for('logout') }}>logout</a>
+    {%else%}
+    Please login here {{ session['username'] }} <br />
+    <a href={{ url_for('login') }}>login</a>
+    {%endif %}
+{% endblock content %}

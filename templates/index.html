@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}
+Students Details
+{% endblock %}
+{% block content %}
+<style>
+    table,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: lightblue;
+        text-align: center;
+    }
+    td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: lightgray; 
+        text-align: center;
+        height: 2rem;
+        width: 6rem;
+    }
+    nav{
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: aqua;
+        height: 5rem;
+        width: 66rem;
+        word-spacing: 5rem;
+        padding-top: 1rem;
+      }
+      nav a{
+        color: black;
+        
+      }
+      table{
+        margin-top: 2rem;
+      }
+</style>
+
+<nav>
+    <a href="{{url_for('home')}}">Home</a>
+    <a href="{{url_for('student')}}">Add</a>
+    <a href="{{url_for('logout')}}">logout</a>
+  </nav>
+
+<table>
+    <tr>
+        <th colspan="11">Students Details</th>
+    </tr>
+    <tr>
+        <th>Serial No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>RollNo</th>
+        <th colspan="5">Marks</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {%for details in data%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{details.Name}}</td>
+        <td>{{details.Age}}</td>
+        <td>{{details.Roll_NO}}</td>
+        {%for mark in details.Marks%}
+        <td class="marks">{{mark}}</td>
+        {%endfor%}
+        <td><a href="{{url_for('edit',name=loop.index)}}">Edit</a></td>
+        <td><a href="{{url_for('delete_method',name=loop.index)}}">Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+
+{% endblock %}
